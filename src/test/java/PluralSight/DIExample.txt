@@ -1,0 +1,1 @@
+Open DI.zip in Sprint/Eclipse IDE for better analysing

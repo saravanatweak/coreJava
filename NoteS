@@ -1,0 +1,17 @@
+Extra jars have to added into the project class path
+
+1)  For Derby : derby.jar derbyClient.jar
+http://db.apache.org/derby/derby_downloads.html
+http://www.java2s.com/Code/Jar/d/Downloadderbyclientjar.htm
+
+
+2)  For Junit : junit-4.12.jar
+http://search.maven.org/#search|gav|1|g:"junit" AND a:"junit"
+
+
+3) For Harmcrest test cases to Run In Junit directory add the below jar in classpath
+http://www.java2s.com/Code/Jar/h/Downloadhamcrestall13jar.htm
+
+
+
+Have included links to downlowd the same

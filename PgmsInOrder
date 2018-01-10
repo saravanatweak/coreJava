@@ -1,0 +1,29 @@
+Basic Things:
+
+		VariableLengthArgs????
+
+
+		PackageClass
+		RegexClassBasic		    RegexClassExmplePgms
+		MemberInnerclass        AnonymousInnerClass
+
+        CallByValueAndRefrence
+        PipedInAndOutputStream
+        FileSystem
+        SerializationInJava
+        DetermineClassObject    DeterminObjectOfClass           NewInstanceExp      PrivateMethodCall
+        GettingDateThroughDiffApis      DateFormatVarious       SimpleDateFormatExp
+        Collections : Product
+            ListExp     ArrayListExp        ComparatorWithoutGeneric        ComparatorWithGeneric
+
+        PropertiesWithPlainTextFormat      PropeNithikartiesWithXmlFormat      LoadingDefaultPropertiesFromPackage
+        JDBCDatabaseConnExp
+        BoxingUnBoxing
+        ApplyingAnnotation      CustomAnnotation        MyCustomAnnotation
+        LocaleExample
+Algorithm:
+        BubbleSort      LinkedListExample
+
+
+
+		
