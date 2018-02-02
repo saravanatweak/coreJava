@@ -1,4 +1,4 @@
-package HackersRank;
+package codeChallange.HackersRank;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -24,15 +24,12 @@ public class CafeTsetWithHamcrest {
     public void canBrewEspresso(){
 
         //Given clause
-
         withBeans();
 
         //Wehn Clause
         CoffeeBean coffee = cafe.brew(CoffeeType.Espresso);
 
-
         //Then clause
-
         assertEquals("Wrong no of beans", ESPRESSO_BEANS, coffee.getType());//
         //What we want to do is be able to replicate that kind of good quality diagnostic without having to rewrite the message and the assertEquals every time, and Hamcrest allows us to do that with compositional matchers. So a compositional matcher is a matcher that will take another matcher as a parameter.
         //so the above line can be changed into// try to test by cahnging cafe.brew method return new CoffeeBean(coffeeType, 0, requiredMilk);
@@ -55,7 +52,7 @@ public class CafeTsetWithHamcrest {
         //if you change to 0 to 1 you will get an error rather than failure, see the Junint doc for more detail
 
     }
-/*Above is error case */
+    /*Above is error case */
 
 
     /*Below one is for failure case*/
@@ -99,6 +96,3 @@ public class CafeTsetWithHamcrest {
         //return cafe;
     }
 }
-
-
-
