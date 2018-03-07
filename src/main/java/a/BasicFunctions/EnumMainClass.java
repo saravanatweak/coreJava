@@ -1,4 +1,4 @@
-package BasicFunctions;
+package a.BasicFunctions;
 
 import java.util.EnumSet; // will help you out to get the range of constants like from to concept
 

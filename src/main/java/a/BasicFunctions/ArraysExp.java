@@ -1,4 +1,4 @@
-package BasicFunctions;
+package a.BasicFunctions;
 import java.util.Random;
 
 

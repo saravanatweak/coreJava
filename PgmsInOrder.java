@@ -1,7 +1,7 @@
 /*
-import BasicFunctions.ArraysExp;
-import BasicFunctions.BasicFunctinos;
-import BasicFunctions.Constructor;
+import ArraysExp;
+import BasicFunctinos;
+import Constructor;
 import CoreJava.IOPackage.*;
 import CoreJava.JavaLang.CloneableInfo;
 import CoreJava.JavaLang.ReflectionApi.*;

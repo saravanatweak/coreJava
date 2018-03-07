@@ -1,4 +1,4 @@
-package CoreJava.newBoatsMan.InnerClass;
+package a.BasicFunctions.InnerClass;
 
 
 abstract class PersonAbstract {
@@ -12,7 +12,7 @@ interface EatableInterface {
 public class AnonymousInnerClass {
     public static void main(String args[]){
 
-        //Abstrcat or concreate class
+        //Abstraat or concrete class
         PersonAbstract p=new PersonAbstract(){
             void eat(){System.out.println("nice fruits");} //class has been extended
         };

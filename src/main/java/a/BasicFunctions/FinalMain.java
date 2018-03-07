@@ -1,4 +1,4 @@
-package BasicFunctions;
+package a.BasicFunctions;
 
 public class FinalMain {
 	

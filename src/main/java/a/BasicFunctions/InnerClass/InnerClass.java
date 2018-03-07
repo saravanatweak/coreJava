@@ -1,4 +1,4 @@
-package CoreJava.newBoatsMan.InnerClass;
+package a.BasicFunctions.InnerClass;
 
 public class InnerClass{
     public static void main(String args[]){
@@ -36,7 +36,7 @@ class LocalInnerClass {
     // If you want to invoke the methods of local inner class, you must instantiate this class inside the method.
     static String  data = "LocalInnerclass has printed";//instance variable
 
-    static void display() { //static keyworkd is used to access the method from Main class, for sarvana convienent
+    static void display() { //static keyword is used to access the method from Main class, for sarvana convienent
         class Local {
             int value=50;//local variable must be final till jdk 1.7 only
             void msg() { System.out.println(data + " "+ value);}
