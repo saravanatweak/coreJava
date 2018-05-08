@@ -35,51 +35,62 @@ public class SingletonExp {
 * that is making this getInstance method synchronous.
 * */
 
-//Trying to fix above code by introducing SYnchronization
-/*This is the first fix to this problem called the synchronized Singleton pattern. It is simply written like that, just by adding the synchronized keyword on the declaration of the getInstance method. What is this fix going to do? Well, it is just going to prevent two threads from executing this getInstance method, so we have the guarantee that only one instance of the Singleton class is going to be created. From a purely functional point of view, this fix is perfect, it will make our Singleton class work as expected, even in a multi-threaded environment.
-*/
-class SingletonExpWithSynchronization {
-    private static SingletonExpWithSynchronization instance; //class can have single instance only
-    private SingletonExpWithSynchronization (){} //it is not possible to build this class outside of itself
-    public static synchronized SingletonExpWithSynchronization getInstance(){
+
+class SigletonWithSynchronous {
+    private static SigletonWithSynchronous instance; //class can have single instance only
+    private SigletonWithSynchronous(){} //it is not possible to build this class outside of itself
+    public static synchronized SigletonWithSynchronous getInstance(){
         if(instance == null)
-            return new SingletonExpWithSynchronization();
+            return new SigletonWithSynchronous();
         return instance;
     } }
+//Trying to fix above code by introducing synchronous
+/*This is the first fix to this problem called the synchronized Singleton pattern. It is simply written like that,
+just by adding the synchronized keyword on the declaration of the getInstance method. What is this fix going to do?
+Well, it is just going to prevent two threads from executing this getInstance method, so we have the guarantee that
+ only one instance of the Singleton class is going to be created. From a purely functional point of view,
+  this fix is perfect, it will make our Singleton class work as expected, even in a multi-threaded environment.
+*/
 
-//1st Solution wiht double chekc for the same
-class SingletonExpDC {
+
+//1st Solution with double check for the same
+class SingletonWithDoubleCheck {
     private static Object lockOrkey = new Object();
-    private static SingletonExpDC instance; //class can have single instance only
-    private SingletonExpDC(){}//it is not possible to build this class outside of itself
+    private static SingletonWithDoubleCheck instance; //class can have single instance only
+    private SingletonWithDoubleCheck(){}//it is not possible to build this class outside of itself
 
-    public static SingletonExpDC getInstance(){
+    public static SingletonWithDoubleCheck getInstance(){
         if(instance != null)
             return instance;
         synchronized (lockOrkey) {
-
             if(instance == null)
-                instance =  new SingletonExpDC();
+                instance =  new SingletonWithDoubleCheck();
             return instance;
         }
     }
 
-    /*Let us first check inside the getInstance method if the instance field has been created or not. If it has been created then I just return it, and this is fine because it is not in the synchronized block then all my reads will be made in parallel. And then if instance has not been created I have the synchronized block on a special key object which will be static of course, and inside this I have a classical code. Check if instance is null or not. This is a good idea because between the first test and this one another thread could have created this instance of Singleton. If it is null then I create it and return this value. This seems to be a nice way of doing things, but there is a bug in this code which is very subtle, and that we are going to see now. */
+    /*Let us first check inside the getInstance method if the instance field has been created or not.
+    If it has been created then I just return it, and this is fine because it is not in the synchronized block then
+    all my reads will be made in parallel. And then if instance has not been created I have the synchronized block on
+    a special key object which will be static of course, and inside this I have a classical code. Check if instance is null or not.
+    This is a good idea because between the first test and this one another thread could have created this instance of Singleton.
+    If it is null then I create it and return this value. This seems to be a nice way of doing things,
+    but there is a bug in this code which is very subtle, and that we are going to see now. */
 }
 //Final Solution with Correct code with Volatile and synchronization
-class SingletonPatternWithCorrectDC {
+class SingletonGoodDesign {
 
-    private static volatile SingletonPatternWithCorrectDC instance;
+    private static volatile SingletonGoodDesign instance;
     private static Object lockOrKey = new Object();
-    private SingletonPatternWithCorrectDC(){}
+    private SingletonGoodDesign(){}
 
-    public static SingletonPatternWithCorrectDC getInstance(){
+    public static SingletonGoodDesign getInstance(){
         if(instance != null)
             return instance;
 
         synchronized (lockOrKey) {
             if(instance != null) {
-                instance = new SingletonPatternWithCorrectDC();
+                instance = new SingletonGoodDesign();
             }
             return instance;
         }
