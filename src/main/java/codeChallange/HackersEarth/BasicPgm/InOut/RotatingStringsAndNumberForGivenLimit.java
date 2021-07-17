@@ -1,4 +1,4 @@
-package codeChallange.HackersEarth.BasicPgm;
+package codeChallange.HackersEarth.BasicPgm.InOut;
 
 
 import java.util.Scanner;
@@ -12,6 +12,12 @@ All-convoYs-9-be:Alert1. //First line contains the string to convert. S
 SAMPLE OUTPUT
 Epp-gsrzsCw-3-fi:Epivx5. // o.p
 
+input has to be taken from the code
+store it in a array whatever preferable
+get each letter from the array
+add given limit of numers or letters to it
+store it back  to new arry
+print the new array
 
 */
 public class RotatingStringsAndNumberForGivenLimit {

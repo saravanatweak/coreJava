@@ -1,4 +1,4 @@
-package codeChallange.HackersEarth.BasicPgm;
+package codeChallange.HackersEarth.BasicPgm.InOut;
 
 
 /*
